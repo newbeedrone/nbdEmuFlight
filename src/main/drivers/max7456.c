@@ -230,7 +230,7 @@ static void max7456DrawScreenSlow(void);
 static uint8_t max7456Send(uint8_t add, uint8_t data)
 {
     spiTransferByte(busdev->busdev_u.spi.instance, add);
-    delayMicroseconds(5);
+    delayMicroseconds(10);
     return spiTransferByte(busdev->busdev_u.spi.instance, data);
 }
 
