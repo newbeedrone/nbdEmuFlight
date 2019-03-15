@@ -76,6 +76,7 @@
 #define SERIALRX_PROVIDER               SERIALRX_SPEKTRUM2048
 #undef  USE_SPEKTRUM_REAL_RSSI
 #undef  USE_SPEKTRUM_FAKE_RSSI
+#define RX_CHANNELS_TAER
 
 // *************** OSD *****************************
 #define USE_MAX7456
@@ -122,8 +123,7 @@
 #define USE_SERIAL_4WAY_BLHELI_INTERFACE
 #define ENABLE_DSHOT_DMAR               true
 
-// #define DEFAULT_FEATURES                (FEATURE_OSD | FEATURE_TELEMETRY | FEATURE_LED_STRIP)
-#define DEFAULT_FEATURES                (FEATURE_OSD | FEATURE_TELEMETRY)
+#define DEFAULT_FEATURES                (FEATURE_OSD | FEATURE_TELEMETRY | FEATURE_LED_STRIP)
 
 #define TARGET_IO_PORTA                 0xffff
 #define TARGET_IO_PORTB                 0xffff
