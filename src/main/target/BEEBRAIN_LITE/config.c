@@ -75,7 +75,7 @@ void targetConfiguration(void)
         pidConfigMutable()->pid_process_denom = 1;
     }
 
-    for (uint8_t pidProfileIndex = 0; pidProfileIndex < MAX_PROFILE_COUNT; pidProfileIndex++) {
+    for (uint8_t pidProfileIndex = 0; pidProfileIndex < 3; pidProfileIndex++) {
         pidProfile_t *pidProfile = pidProfilesMutable(pidProfileIndex);
 
         pidProfile->pid[PID_ROLL].P  = 86;
@@ -100,7 +100,6 @@ void targetConfiguration(void)
         controlRateConfig->rates[FD_ROLL]  = 80;
         controlRateConfig->rates[FD_PITCH] = 80;
         controlRateConfig->rates[FD_YAW] = 80;
-        controlRateConfig->dynThrPID = 50;
     }
 
     osdConfigMutable()->item_pos[OSD_CRAFT_NAME]        = OSD_POS(9, 10) | VISIBLE_FLAG;

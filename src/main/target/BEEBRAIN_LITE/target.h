@@ -26,6 +26,8 @@
 #define USE_TARGET_CONFIG
 #define TARGET_PREINIT
 
+#define BRUSHED_MOTORS
+
 // *************** SPI *****************************
 #define USE_SPI
 #define USE_SPI_DEVICE_2
