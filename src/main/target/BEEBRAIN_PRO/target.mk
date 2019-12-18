@@ -12,8 +12,6 @@ TARGET_SRC  =                                       \
 
 ifeq ($(TARGET), BEEBRAIN_PRO_FRSKY_INTL)
 TARGET_SRC += drivers/rx/rx_cc2500.c                \
-              rx/cc2500_common.c                    \
-              rx/cc2500_sfhss.c                     \
               rx/cc2500_frsky_shared.c              \
               rx/cc2500_frsky_d.c                   \
               rx/cc2500_frsky_x.c
@@ -21,26 +19,6 @@ endif
 
 ifeq ($(TARGET), BEEBRAIN_PRO_FRSKY_US)
 TARGET_SRC += drivers/rx/rx_cc2500.c                \
-              rx/cc2500_common.c                    \
-              rx/cc2500_sfhss.c                     \
-              rx/cc2500_frsky_shared.c              \
-              rx/cc2500_frsky_d.c                   \
-              rx/cc2500_frsky_x.c
-endif
-
-ifeq ($(TARGET), BEEBRAIN_PRO_SFHSS_INTL)
-TARGET_SRC += drivers/rx/rx_cc2500.c                \
-              rx/cc2500_common.c                    \
-              rx/cc2500_sfhss.c                     \
-              rx/cc2500_frsky_shared.c              \
-              rx/cc2500_frsky_d.c                   \
-              rx/cc2500_frsky_x.c
-endif
-
-ifeq ($(TARGET), BEEBRAIN_PRO_SFHSS_US)
-TARGET_SRC += drivers/rx/rx_cc2500.c                \
-              rx/cc2500_common.c                    \
-              rx/cc2500_sfhss.c                     \
               rx/cc2500_frsky_shared.c              \
               rx/cc2500_frsky_d.c                   \
               rx/cc2500_frsky_x.c

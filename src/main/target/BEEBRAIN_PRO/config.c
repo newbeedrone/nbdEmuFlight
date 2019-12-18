@@ -49,11 +49,8 @@
 
 #include "pg/rx.h"
 #include "pg/rx_spi.h"
-#include "pg/rx_spi_cc2500.h"
 #include "pg/pinio.h"
 #include "pg/piniobox.h"
-
-#include "osd/osd.h"
 
 #include "io/serial.h"
 #include "io/osd.h"

@@ -39,7 +39,7 @@
 #include "pg/pinio.h"
 #include "pg/piniobox.h"
 
-#include "msp/msp_box.h"
+#include "interface/msp_box.h"
 
 #include "drivers/pwm_output.h"
 #include "drivers/pwm_esc_detect.h"

@@ -29,7 +29,7 @@
 #include "pg/pinio.h"
 #include "pg/piniobox.h"
 
-#include "msp/msp_box.h"
+#include "interface/msp_box.h"
 
 #include "drivers/io.h"
 #include "pwm_output.h"
@@ -153,7 +153,7 @@ static void pwmWriteUnused(uint8_t index, float value)
 
 FAST_CODE static void pwmWriteStandard(uint8_t index, float value)
 {
-    if(featureIsEnabled(FEATURE_3D)) {
+    if(feature(FEATURE_3D)) {
         if (lrintf(value) - 1500 > 0) {
             pinioSet(0, 0);     // set to forward
             value = (value - 1500) * 2 + 1000;
