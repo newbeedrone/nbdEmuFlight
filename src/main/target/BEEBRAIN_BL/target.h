@@ -57,18 +57,18 @@
 // *************** Gyro & ACC **********************
 #define GYRO
 #define ACC
-#define USE_GYRO_SPI_MPU6500
-#define USE_ACC_SPI_MPU6500
+#define USE_GYRO_SPI_MPU6000
+#define USE_ACC_SPI_MPU6000
 
-#define MPU6500_CS_PIN                  PA4
-#define MPU6500_SPI_INSTANCE            SPI3
+#define MPU6000_CS_PIN                  PA4
+#define MPU6000_SPI_INSTANCE            SPI3
 
 #define USE_EXTI
 #define MPU_INT_EXTI                    PB0
 #define USE_MPU_DATA_READY_SIGNAL
 
-#define GYRO_MPU6500_ALIGN              CW90_DEG
-#define ACC_MPU6500_ALIGN               CW90_DEG
+#define GYRO_MPU6000_ALIGN              CW90_DEG
+#define ACC_MPU6000_ALIGN               CW90_DEG
 
 // *************** RX ******************************
 #define DEFAULT_RX_FEATURE              FEATURE_RX_SERIAL
