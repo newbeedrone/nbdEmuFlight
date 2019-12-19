@@ -131,9 +131,9 @@ void targetConfiguration(void)
     modeActivationConditionsMutable(4)->range.startStep  = CHANNEL_VALUE_TO_STEP(900);
     modeActivationConditionsMutable(4)->range.endStep    = CHANNEL_VALUE_TO_STEP(1300);
 
-    // ledStripConfigMutable()->ledConfigs[0] = DEFINE_LED(0, 0,  1, 0, LF(COLOR), 0, 0);
-    // ledStripConfigMutable()->ledConfigs[1] = DEFINE_LED(1, 0, 10, 0, LF(COLOR), LO(LARSON_SCANNER), 0);
-    // ledStripConfigMutable()->ledConfigs[2] = DEFINE_LED(2, 0,  2, 0, LF(COLOR), LO(LARSON_SCANNER), 0);
+    ledStripConfigMutable()->ledConfigs[0] = DEFINE_LED(0, 0,  1, 0, LF(COLOR), 0, 0);
+    ledStripConfigMutable()->ledConfigs[1] = DEFINE_LED(1, 0, 10, 0, LF(COLOR), LO(LARSON_SCANNER), 0);
+    ledStripConfigMutable()->ledConfigs[2] = DEFINE_LED(2, 0,  2, 0, LF(COLOR), LO(LARSON_SCANNER), 0);
 
     adjustmentRangesMutable(0)->adjustmentIndex = 1;
     adjustmentRangesMutable(0)->auxChannelIndex = 1;
@@ -150,10 +150,10 @@ void targetConfiguration(void)
     // channelFailsafeConfig->step = CHANNEL_VALUE_TO_RXFAIL_STEP(1000);
 
     // for (uint8_t rxRangeIndex = 0; rxRangeIndex < NON_AUX_CHANNEL_COUNT; rxRangeIndex++) {
-        // rxChannelRangeConfig_t *channelRangeConfig = rxChannelRangeConfigsMutable(rxRangeIndex);
+    //     rxChannelRangeConfig_t *channelRangeConfig = rxChannelRangeConfigsMutable(rxRangeIndex);
 
-        rxChannelRangeConfigsMutable(3)->min = 1160;
-        rxChannelRangeConfigsMutable(3)->max = 1840;
+    //     rxChannelRangeConfigsMutable(rxRangeIndex)->min = 102;
+    //     rxChannelRangeConfigsMutable(rxRangeIndex)->max = 1840;
     // }
 
     gyroConfigMutable()->gyro_lowpass_type = FILTER_BIQUAD;
@@ -172,7 +172,6 @@ void targetConfiguration(void)
     batteryConfigMutable()->vbatmincellvoltage = 29;
     batteryConfigMutable()->vbatwarningcellvoltage = 29;
     voltageSensorADCConfigMutable(0)->vbatscale = 111;
-    mixerConfigMutable()->yaw_motors_reversed = true;
     mixerConfigMutable()->crashflip_motor_percent = 50;
     imuConfigMutable()->small_angle = 180;
     pidConfigMutable()->pid_process_denom = 1;

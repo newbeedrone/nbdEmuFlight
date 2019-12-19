@@ -73,10 +73,7 @@
 // *************** RX ******************************
 #define DEFAULT_RX_FEATURE              FEATURE_RX_SERIAL
 #define SERIALRX_UART                   SERIAL_PORT_USART2
-#define SERIALRX_PROVIDER               SERIALRX_SPEKTRUM2048
-#undef  USE_SPEKTRUM_REAL_RSSI
-#undef  USE_SPEKTRUM_FAKE_RSSI
-#define RX_CHANNELS_TAER
+#define SERIALRX_PROVIDER               SERIALRX_SBUS
 
 // *************** OSD *****************************
 #define USE_MAX7456
